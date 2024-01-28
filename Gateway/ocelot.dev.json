@@ -1,0 +1,27 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/hnbs?numberOfStories={numberOfStories}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/hacker-news-best-stories/{numberOfStories}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "FileCacheOptions": {"TtlSeconds": 5},
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7040
+        }
+      ]
+    }
+     
+
+  ],
+  "GlobalConfiguration": { "BaseUrl": "https://localhost:7777" }
+}
