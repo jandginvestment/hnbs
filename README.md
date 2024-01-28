@@ -47,13 +47,16 @@ We enhanced the ```Hacker News Best Story service``` by adding an API Gateway, l
  ```
 
  1. Setting multiple startup project
+    ![multi project setup](images/multiple.png)
 	- open the hnbs solution in visual studio 2022 (64-bit) edition.
 	- right click on the solution and click on properties in the menu.
 	- select multiple startup project radio button and both the projects.
 	- click on apply button.
- 2. Open appsettings.json of the APIGatway project
+ 3. Open appsettings.json of the APIGatway project
+     ![Azure Redis setup](images/connectionstring.png)
 	1. change the connection string as required
  1. Open the Ocelot.dev.json for below ocelot gateway configurations
+    ![Ocelot setup](images/ocelotsettings.png)
 	- Rate limiting uses Ocelot's built-in middleware.
 	- Caching uses Azure Redis Cache for distributed caching.
 	- Rate limiting rules.
